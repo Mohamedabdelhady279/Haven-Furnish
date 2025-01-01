@@ -1,0 +1,11 @@
+    input{
+    padding: 10px;
+    background-color: white ;
+    border-radius: 10px;
+    width: 25%;
+    border: solid rgba(36, 31, 31, 0.329);
+    }
+    input::placeholder{
+        color:rgba(0, 0, 0, 0.705);
+        background-color: white;
+    }
