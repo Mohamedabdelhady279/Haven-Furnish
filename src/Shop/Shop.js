@@ -105,6 +105,8 @@ const filterproduct=(cat)=>{
           color: '#007bff', // تخصيص اللون
         }}
       />
+
+      {/* filter */}
     <div className='mb-5' data-aos="fade-right" data-aos-duration="1000" >
     <h1 className='text-4xl text-maincolor font-bold text-center'>Our Elegant Furniture Collection</h1>
 
@@ -120,6 +122,7 @@ const filterproduct=(cat)=>{
     </div>
 
 
+{/*البيانات  */}
       <div className="grid grid-cols-2 md:grid-cols-2 mdl:grid-cols-3 lg:grid-cols-4 gap-4" data-aos="fade-up" data-aos-duration="1000">
         {/* استعراض المنتجات */}
         {fliter.map((item) => (
