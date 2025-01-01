@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link, useLoaderData } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import ScrollToTop from 'react-scroll-to-top';
@@ -66,7 +66,7 @@ const Home = () => {
         }}
       />
       {/* first part */} 
-     <div style={groundimg} className='max-w-auto relative 'data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="1000" >
+     <div style={groundimg} className='max-w-auto relative 'data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500" >
      <div className="absolute inset-0 bg-black/10"></div>
     <div className='grid grid-cols-1 md:grid-cols-2 text-center-center gap-6 place-items-center min-h-[600px] mx-[20px] '>
 

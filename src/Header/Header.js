@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { IoIosArrowDown } from 'react-icons/io';
 import { NavLink } from 'react-router-dom';
@@ -8,7 +8,7 @@ import { HiX } from 'react-icons/hi';
 import { LuMenu } from 'react-icons/lu';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAuth, signOut } from 'firebase/auth';
-import { logout, setProducts, setuser } from '../redux/appslice';
+import { logout } from '../redux/appslice';
 import { CiLogout } from 'react-icons/ci';
 import { HashLink } from 'react-router-hash-link';
 
