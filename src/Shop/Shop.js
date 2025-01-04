@@ -123,7 +123,7 @@ const filterproduct=(cat)=>{
 
 
 {/*البيانات  */}
-      <div className="grid grid-cols-2 md:grid-cols-2 mdl:grid-cols-3 lg:grid-cols-4 gap-4" data-aos="fade-up" data-aos-duration="1000">
+      <div className="grid grid-cols-2 xs:grid-cols-1 md:grid-cols-2 mdl:grid-cols-3 lg:grid-cols-4 gap-4" data-aos="fade-up" data-aos-duration="1000">
         {/* استعراض المنتجات */}
         {fliter.map((item) => (
           <div key={item.id} className="relative border-2 border-gray-300 rounded-lg flex flex-col  justify-between min-h-[300px] ">

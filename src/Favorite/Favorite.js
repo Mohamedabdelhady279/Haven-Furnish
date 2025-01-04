@@ -20,7 +20,7 @@ const Favorite = () => {
     <div className="container mx-auto my-5 py-10" data-aos="fade-right" data-aos-duration="1000">
       <h1 className="text-4xl text-maincolor font-bold text-center">Your Favorite Products</h1>
       {favoriteItems.length > 0 ? (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
           {favoriteItems.map((item) => (
             <div key={item.id} className="border-2 border-gray-300 rounded-lg flex flex-col justify-between min-h-[300px]">
               <img

@@ -65,9 +65,15 @@ const Home = () => {
           color: '#007bff', // تخصيص اللون
         }}
       />
+
+
+
+
       {/* first part */} 
      <div style={groundimg} className='max-w-auto relative 'data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500" >
-     <div className="absolute inset-0 bg-black/10"></div>
+     {/* pointer-events-none إلى العنصر الذي يحتوي على  حتى لا يؤثر على التفاعل مع العناصر الأخرى. */}
+     <div className="absolute inset-0 bg-black/10 pointer-events-none"></div>
+   
     <div className='grid grid-cols-1 md:grid-cols-2 text-center-center gap-6 place-items-center min-h-[600px] mx-[20px] '>
 
   {/* left part */}
@@ -79,10 +85,12 @@ const Home = () => {
 
 
     <div className='mt-10'>
-    <Link to='/Shop'><button className="bg-slate-200 text-black px-4 py-2 rounded  transition-colors duration-300  hover:bg-touch"  >
-    Shop now
-   </button>
-    </Link>
+    <Link to='/Shop'>
+        <button className="bg-slate-200 text-maincolor font-bold px-5 py-2 rounded-full transition duration-300 hover:bg-touch cursor-pointer">
+        Shop
+
+        </button>
+        </Link>
     </div>
 
     </div>

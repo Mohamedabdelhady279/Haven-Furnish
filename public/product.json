@@ -85,25 +85,21 @@
   },
   {
       "id": 4,
-      "name": "Bosworth Cheadle 2 - Piece Living Room Set",
+      "name": "Modern Living Room - Grey",
       "category": "Living Room Sets",
       "description": "This is product 4",
       "mainImage": {
-          "url": "./Images/Living Room Sets/Bosworth/Bosworth+Cheadle+2+-+Piece+Living+Room+Set.webp",
+          "url": "/Images/Living Room Sets/id 4/664b333843c6f_.jpeg",
           "alt": "Product 4 Main Image"
       },
       "images": [
           {
-              "url": "./Images/Living Room Sets/Bosworth/1.webp",
+              "url": "/Images/Living Room Sets/id 4/664b33383c982_.jpeg",
               "alt": "Product 4 Image 1"
           },
           {
-              "url": "./Images/Living Room Sets/Bosworth/2.webp",
+              "url": "/Images/Living Room Sets/id 4/664b3338308d7_.jpeg",
               "alt": "Product 4 Image 2"
-          },
-          {
-              "url": "./Images/Living Room Sets/Bosworth/3.webp",
-              "alt": "Product 4 Image 3"
           }
       ],
       "price": 523.81,
@@ -253,25 +249,21 @@
   },
   {
       "id": 10,
-      "name": "Piece Modern and Soft Vegan Leather",
+      "name": "Kimberly Living Room Set Grey",
       "category": "Living Room Sets",
       "description": "This is product 10",
       "mainImage": {
-          "url": "./Images/Living Room Sets/Siete 2/Siete+2+-+Piece+Modern+and+Soft+Vegan+Leather+Manual+Reclining+Living+Room+Set.webp",
+          "url": "/Images/Living Room Sets/id 10/4NPGUX-Kimberly Living Room Set Grey-1.jpg",
           "alt": "Product 10 Main Image"
       },
       "images": [
           {
-              "url": "./Images/Living Room Sets/Siete 2/1.webp",
+              "url": "/Images/Living Room Sets/id 10/JKq4Wv-Kimberly Living Room Set Grey-2 (1).jpg",
               "alt": "Product 10 Image 1"
           },
           {
-              "url": "./Images/Living Room Sets/Siete 2/2.webp",
+              "url": "/Images/Living Room Sets/id 10/JKq4Wv-Kimberly Living Room Set Grey-2.jpg",
               "alt": "Product 10 Image 2"
-          },
-          {
-              "url": "./Images/Living Room Sets/Siete 2/3.webp",
-              "alt": "Product 10 Image 3"
           }
       ],
       "price": 544.96,
@@ -421,25 +413,21 @@
   },
   {
       "id": 16,
-      "name": "Bailes 3 - Piece Living Room Set",
+      "name": "Çobanoğlu Sectional Sofa",
       "category": "Living Room Sets",
       "description": "This is product 16",
       "mainImage": {
-          "url": "./Images/Living Room Sets/Bailes 3/Bailes+3+-+Piece+Living+Room+Set,+Beige.webp",
+          "url": "/Images/Living Room Sets/16/689HkZ-blob.jpeg",
           "alt": "Product 16 Main Image"
       },
       "images": [
           {
-              "url": "./Images/Living Room Sets/Bailes 3/1.webp",
+              "url": "/Images/Living Room Sets/16/h3csyu-blob.jpeg",
               "alt": "Product 16 Image 1"
           },
           {
-              "url": "./Images/Living Room Sets/Bailes 3/2.webp",
+              "url": "/Images/Living Room Sets/16/v9TRsS-blob.jpeg",
               "alt": "Product 16 Image 2"
-          },
-          {
-              "url": "./Images/Living Room Sets/Bailes 3/3.webp",
-              "alt": "Product 16 Image 3"
           }
       ],
       "price": 429.16,
@@ -589,25 +577,21 @@
   },
   {
       "id": 22,
-      "name": "Clifford 2 - Piece Velvet Living Room Set",
+      "name": "LINSY Popular Style Genuine Leather Home Sofa PS060-A",
       "category": "Living Room Sets",
       "description": "This is product 22",
       "mainImage": {
-          "url": "./Images/Living Room Sets/Clifford 2/Clifford+2+-+Piece+Velvet+Living+Room+Set.webp",
+          "url": "/Images/Living Room Sets/22/dc4ab39d8e7e8659da4d031f57371451_medium.jpg",
           "alt": "Product 22 Main Image"
       },
       "images": [
           {
-              "url": "./Images/Living Room Sets/Clifford 2/1.webp",
+              "url": "/Images/Living Room Sets/22/9c68bbd71bb1cec200cf0585e626b9a8_medium.jpg",
               "alt": "Product 22 Image 1"
           },
           {
-              "url": "./Images/Living Room Sets/Clifford 2/2.webp",
+              "url": "/Images/Living Room Sets/22/fa73a19ca55d333e7628c8a3b2f73047_medium.jpg",
               "alt": "Product 22 Image 2"
-          },
-          {
-              "url": "./Images/Living Room Sets/Clifford 2/3.webp",
-              "alt": "Product 22 Image 3"
           }
       ],
       "price": 479.81,
@@ -757,26 +741,22 @@
   },
   {
       "id": 28,
-      "name": "Cherity 3 - Piece Boucle Living Room Set",
+      "name": "LINSY Living Room Multi-functional Lawrence Leather Sofa PS638-A",
       "category": "Living Room Sets",
       "description": "This is product 28",
       "mainImage": {
-          "url": "./Images/Living Room Sets/Cherity 3/Cherity+3+-+Piece+Boucle+Living+Room+Set,+Beige.webp",
+          "url": "/Images/Living Room Sets/28/42583c1e09c8dbc03b5611d3649f0a48_medium.jpg",
           "alt": "Product 28 Main Image"
       },
       "images": [
           {
-              "url": "./Images/Living Room Sets/Cherity 3/1.webp",
+              "url": "/Images/Living Room Sets/28/59f857c4f9aa3477e5b65aa658529833_medium.jpg",
               "alt": "Product 28 Image 1"
           },
           {
-              "url": "./Images/Living Room Sets/Cherity 3/2.webp",
+              "url": "/Images/Living Room Sets/28/8a906ef73dd2214caadaa5b40f0154ef_medium.jpg",
               "alt": "Product 28 Image 2"
-          },
-          {
-              "url": "./Images/Living Room Sets/Cherity 3/3.webp",
-              "alt": "Product 28 Image 3"
-          }
+          } 
       ],
       "price": 634.08,
       "ratings": 3.2,
@@ -925,25 +905,21 @@
   },
   {
       "id": 34,
-      "name": "Raylina 4 - Piece Living Room Set",
+      "name": "LINSY Italian Stlye Cloud Shape Fabric Sofa BS178-A",
       "category": "Living Room Sets",
       "description": "This is product 34",
       "mainImage": {
-          "url": "./Images/Living Room Sets/Raylina 4/Raylina+4+-+Piece+Living+Room+Set,+Dark+Gray+Linen+Blend.webp",
+          "url": "/Images/Living Room Sets/34/b19320dbc4c89f7c486e5938292cdf4b_medium.jpg",
           "alt": "Product 34 Main Image"
       },
       "images": [
           {
-              "url": "./Images/Living Room Sets/Raylina 4/1.webp",
+              "url": "/Images/Living Room Sets/34/1238d2272f7c3bb91c60d4d4feff93b6_medium.jpg",
               "alt": "Product 34 Image 1"
           },
           {
-              "url": "./Images/Living Room Sets/Raylina 4/2.webp",
+              "url": "/Images/Living Room Sets/34/5f6305b431dc09c42cba57c448c44709_medium.jpg",
               "alt": "Product 34 Image 2"
-          },
-          {
-              "url": "./Images/Living Room Sets/Raylina 4/3.webp",
-              "alt": "Product 34 Image 3"
           }
       ],
       "price": 571.0,

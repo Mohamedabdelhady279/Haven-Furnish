@@ -50,9 +50,10 @@ signOut(auth)
 
 <div className=' flex justify-between items-center mx-auto'>
   {/* left div */}
-<div>
-<Link to="/" className='font-firstname text-[32px] font-bold text-[#4A4A4A] 	'>
-Haven <span className='font-secondname text-[24px] text-[#A87E4D]'>Furnish</span>
+
+<div >
+<Link to="/" className='font-firstname md:text-[32px] xs:text-[15px] sm:text-[15px] font-bold text-[#4A4A4A]  	'>
+Haven <span className='font-secondname md:text-[24px] xs:text-[15px] sm:text-[15px] text-[#A87E4D]'>Furnish</span>
 </Link>
 </div>
 
@@ -98,10 +99,10 @@ About Us
           ?(<div className='flex'>
             <p className='my-[1px] text-maincolor transition-colors duration-300 hover:text-touch'>{userinfo.username}</p>
             
-            {userinfo&&<button onClick={signout}><CiLogout className='font-bold text-2xl text-maincolor transition-colors duration-300 hover:text-touch' /></button>}
+            {userinfo&&<button onClick={signout}><CiLogout className='font-bold  text-xl text-maincolor transition-colors duration-300 hover:text-touch' /></button>}
           </div>)
           
-          :(<NavLink to='/Signup' className='font-semibold text-lg text-maincolor transition-colors duration-300 hover:text-touch'>Signup</NavLink> )
+          :(<NavLink to='/Signup' className='font-semibold text-lg  text-maincolor transition-colors duration-300 hover:text-touch'>Signup</NavLink> )
           }
 
 
