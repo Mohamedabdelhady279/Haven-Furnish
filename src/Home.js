@@ -197,7 +197,7 @@ className="w-full h-[400px] object-cover"
 
 <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="700">
 <img
-src="Images/Tv Stands/Inniss/Inniss+TV+Stand+for+TVs+up+to+78_.webp"
+src="Images\Coffee Tables\20\51ozBTok4FL._AC_.jpg"
 alt="Inniss TV"
 className="w-full h-[400px] object-cover"
 />
