@@ -26,7 +26,7 @@ const Favorite = () => {
               <img
                 src={item.mainImage.url}
                 alt={item.name}
-                className="w-full h-40 object-cover rounded-md"
+               className="w-full h-[200px]  object-cover rounded mb-4"
               />
               <h3 className="text-lg font-semibold px-2">{item.name}</h3>
               <p className="text-lg font-bold text-maincolor px-2">${item.price}</p>
