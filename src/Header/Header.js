@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { IoIosArrowDown } from 'react-icons/io';
 import { NavLink } from 'react-router-dom';
 import { MdFavorite } from 'react-icons/md';
-import { FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingCart, FaUserPlus } from 'react-icons/fa';
 import { HiX } from 'react-icons/hi';
 import { LuMenu } from 'react-icons/lu';
 import { useDispatch, useSelector } from 'react-redux';
@@ -102,11 +102,11 @@ About Us
             {userinfo&&<button onClick={signout}><CiLogout className='font-bold  text-xl text-maincolor transition-colors duration-300 hover:text-touch' /></button>}
           </div>)
           
-          :(<NavLink to='/Signup' className='font-semibold text-lg  text-maincolor transition-colors duration-300 hover:text-touch'>Signup</NavLink> )
+          :(<NavLink to='/Signup' className='font-semibold text-[20px]  text-maincolor transition-colors duration-300 hover:text-touch'><FaUserPlus /></NavLink> )
           }
 
 
-  <NavLink to='/Favorite' className='group  flex items-center font-semibold text-xl text-maincolor transition-colors duration-300 hover:text-touch '>
+  <NavLink to='/Favorite' className='group  flex items-center font-semibold text-[20px] text-maincolor transition-colors duration-300 hover:text-touch '>
   <MdFavorite />
 
   {favoriteItems.length > 0 && 

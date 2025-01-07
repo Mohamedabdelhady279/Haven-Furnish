@@ -118,7 +118,6 @@ const Home = () => {
     clickable: true,
   }}
 
-  navigation={true}
   modules={[Autoplay, Pagination, Navigation]}
   breakpoints={{
     375: {
