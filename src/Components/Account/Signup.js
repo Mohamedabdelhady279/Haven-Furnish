@@ -36,6 +36,7 @@ const Signup = () => {
       password:Yup.string().min(8,"Must be at least 8 char") .required("required"),
       repassword:Yup.string().oneOf([Yup.ref("password")],"password not match").required("required"),
     }),
+   
     onSubmit:(values,{resetForm})=>{
       const{name,email,password}=values
       setloading(true)
@@ -79,7 +80,6 @@ createUserWithEmailAndPassword(auth, email, password)
   });
 
     }
-
   })
 
 
@@ -88,7 +88,7 @@ createUserWithEmailAndPassword(auth, email, password)
     <div className='container mx-auto flex flex-col justify-center items-center  py-10'>
       <ToastContainer />
 
-    <div className='text-center mb-[50px]'data-aos="fade-right" data-aos-duration="1000">
+    <div className='text-center mb-[30px]'data-aos="fade-right" data-aos-duration="1000">
       <h1 className='text-4xl font-bold text-center'>Sign Up Now</h1>
       <p className='text-[#6D747C] font-normal	mt-4 text-[15px]'>Sign up now and discover the perfect furniture pieces to elevate your space! </p>
     </div>
@@ -229,9 +229,9 @@ createUserWithEmailAndPassword(auth, email, password)
           </button>
 
 
-        <div className='mt-2 flex'>
-        <h6 className='mr-1'>Already have an account?</h6>
-        <Link to='/login'>Log in</Link>
+        <div className='mt-2 flex items-center'>
+        <h6 className='m-1'>Already have an account?</h6>
+        <Link to='/login'>Login now!</Link>
         </div>
           {firebase&&<p className='text-red-500 text-center mt-4'>{firebase}</p>}
 

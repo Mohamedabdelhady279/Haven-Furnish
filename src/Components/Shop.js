@@ -16,7 +16,7 @@ const Shop = () => {
   useEffect(() => {
     setdata(products);
     setfliter(products);
-  }, [products]);
+  }, []);
 
 
 
@@ -102,7 +102,7 @@ const filterproduct=(cat)=>{
           bottom: '20px',
           right: '20px',
           cursor: 'pointer',
-          color: '#007bff', // تخصيص اللون
+          color: 'rgb(184,142,47)', // تخصيص اللون
         }}
       />
 
@@ -110,7 +110,7 @@ const filterproduct=(cat)=>{
     <div className='mb-5' data-aos="fade-right" data-aos-duration="1000" >
     <h1 className='text-4xl text-maincolor font-bold text-center'>Our Elegant Furniture Collection</h1>
 
-      <div className='text-center mt-5 py-3 flex flex-wrap gap-2 justify-center'>
+      <div  className='text-center mt-5 py-3 flex flex-wrap gap-2 justify-center'>
       <button  className=' bg-white-100 text-l text-maincolor  px-3 py-2 rounded-full  border-4 border-gray-300 transition-colors duration-300  hover:bg-touch items-center'  onClick={()=>setfliter(data)} >All Collection </button>
       <button id="living-room-sets" className=' bg-white-100 text-l text-maincolor  px-3 py-2 rounded-full  border-4 border-gray-300 transition-colors duration-300  hover:bg-touch items-center' onClick={()=>filterproduct("Living Room Sets")} >Living Room Sets</button>
       <button id="shoe-storage"className=' bg-white-100 text-l text-maincolor  px-3 py-2 rounded-full  border-4 border-gray-300 transition-colors duration-300  hover:bg-touch items-center' onClick={()=>filterproduct("Shoe Storage")}  >Shoe Storage</button>

@@ -14,7 +14,6 @@ const Home = () => {
   const datas = useLoaderData(); // البيانات المحملة من الـ loader
   const products = datas.data;  // قائمة المنتجات داخل الكائن 'data'
 
-  console.log(products); // تحقق من البيانات
 
 
 
@@ -62,7 +61,7 @@ const Home = () => {
           bottom: '20px',
           right: '20px',
           cursor: 'pointer',
-          color: '#007bff', // تخصيص اللون
+          color: 'rgb(184,142,47)', // تخصيص اللون
         }}
       />
 

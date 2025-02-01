@@ -1,23 +1,28 @@
 import React, { useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProvider } from 'react-router-dom';
-import Header from './Header/Header';
-import Footer from './Footer/Footer';
-import Home from './Home';
-import Shop from './Shop/Shop';
-import Login from './Login/login/Login';
-import Signup from './Login/signup/Signup';
-import Favorite from './Favorite/Favorite';
-import Maincart from './Cart/Maincart';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
+import Home from './Components/Home';
+import Shop from './Components/Shop';
+import Signup from './Components/Account/Signup';
+import Login from './Components/Account/Login';
+import Maincart from './Components/Maincart';
+import Favorite from './Components/Favorite';
+import Chackout from './Components/Chackout';
+import ProtectedRoute from './Components/Account/ProtectedRoute';
 import { productdata } from './api';
 import './App.css'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Bounce } from 'react-toastify';
-import Chackout from './Chackout/Chackout';
-import ProtectedRoute from './ProtectedRoute';
+
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+
+
+
 
 const Layout = () => {
   
@@ -55,8 +60,10 @@ const App = () => {
       once: false,
     });
   }, []);
-  const router = createBrowserRouter(createRoutesFromElements(
 
+
+
+  const router = createBrowserRouter(createRoutesFromElements(
     <Route>
 
       <Route path='/' element={<Layout />}>

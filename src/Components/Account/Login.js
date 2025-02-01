@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import {facebookProvider } from "../../firebaseConfig";
 import { useFormik } from 'formik';
 import * as Yup  from "yup";
 import { ToastContainer, toast } from 'react-toastify';
@@ -19,8 +20,28 @@ const Login = () => {
   const [sucssmassage, setsucssmassage] = useState ("")
   const [firebase, seterorrfirebase] = useState()
   const dispatch=useDispatch()
-  
-
+ 
+ 
+  const auth = getAuth();
+  const handleFacebookLogin = async () => {
+    try {
+      setloading(true);
+      const result = await signInWithPopup(auth, facebookProvider);
+      const user = result.user;
+      const userData = {
+        __id: user.uid,
+        email: user.email,
+        username: user.displayName || "User",
+        };
+      localStorage.setItem("userinfo", JSON.stringify(userData));
+      dispatch(setuser(userData));
+      toast.success(`Welcome, ${user.displayName}!`, { position: "top-center", autoClose: 2000, hideProgressBar: true, theme: "dark", transition: Bounce });
+      setTimeout(() => navigat("/"), 1000);
+    } catch (error) {
+      setloading(false);
+      seterorrfirebase("Failed to login with Facebook. Please try again.");
+    }
+  };
 
   const formik = useFormik({
     initialValues: { email: '',   password: '' },
@@ -89,9 +110,9 @@ const Login = () => {
 
 
     },
-    })
+    });
       
-
+   
   return (
     <div data-aos="fade-right" data-aos-duration="1000">
       
@@ -111,7 +132,6 @@ const Login = () => {
 
 
     
-
     <div className='relative mb-6'>
     <input  className='w-full border border-gray-300 rounded px-2 py-2 focus:outline-none focus:border-blue-500'
           type='email' name='email'
@@ -139,8 +159,6 @@ const Login = () => {
           )
 
         }
-
-
     </div>
 
       
@@ -180,11 +198,12 @@ const Login = () => {
           >
             {loading?"processing ...":"Login"}
           </button>
-     
+        
 
-          <div className='mt-2 flex'>
+
+          <div className='mt-2 flex '>
         <h6 className='mr-1'>  Not registered yet?</h6>
-        <Link to='/Signup'>Create account</Link>
+        <Link to='/Signup'>Create account!</Link>
         </div>
           {firebase&&<p className='text-red-500 text-center mt-4'>{firebase}</p>}
 
@@ -192,7 +211,17 @@ const Login = () => {
 
 
       </form>
-
+    
+        <div className="flex flex-col items-center gap-3 mt-4">
+            <p className='mt-2'>Or</p>
+              <button  className="w-full bg-red-500 text-white py-2 rounded hover:bg-red-600">
+                Sign in with Google
+              </button>
+              <button onClick={handleFacebookLogin}  className="w-full bg-blue-700 text-white py-2 rounded hover:bg-blue-800">
+                Sign in with Facebook
+              </button>
+          </div>
+        
     </div>
 
 

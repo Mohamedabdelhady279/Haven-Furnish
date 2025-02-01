@@ -23,13 +23,13 @@ const Footer = () => {
     <a>Week days: 9AM - 6Pm</a>
     <a>Saturday: 8Am - 2Pm</a>
   </div>
-</footer>
+      </footer>
 
 
-<footer className="footer footer-center bg-base-200 text-base-content p-4">
+<footer className="footer footer-center  bg-base-200 text-base-content ">
   <aside>
-    <p>Copyright © {new Date().getFullYear()}- <span><Link to="/" className='font-firstname text-[18px] font-bold text-[#4A4A4A] 	'>
-Haven <span className='font-secondname text-[18px] text-[#A87E4D]'>Furnish</span>
+    <p>Copyright © {new Date().getFullYear()}- <span><Link to="/" className='font-firstname text-[15px] font-bold text-[#4A4A4A] 	'>
+Haven <span className='font-secondname text-[12px] text-[#A87E4D]'>Furnish</span>
 </Link></span> - All right reserved.</p>
   </aside>
 </footer>    
