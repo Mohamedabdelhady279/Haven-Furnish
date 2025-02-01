@@ -212,7 +212,7 @@ const Login = () => {
 
       </form>
     
-        <div className="flex flex-col items-center gap-3 mt-4">
+        <div className="flex flex-col items-center gap-3 mt-4 w-full max-w-[400px]">
             <p className='mt-2'>Or</p>
               <button  className="w-full bg-red-500 text-white py-2 rounded hover:bg-red-600">
                 Sign in with Google
