@@ -38,6 +38,7 @@ const Login = () => {
       toast.success(`Welcome, ${user.displayName}!`, { position: "top-center", autoClose: 2000, hideProgressBar: true, theme: "dark", transition: Bounce });
       setTimeout(() => navigat("/"), 1000);
     } catch (error) {
+      console.log("Facebook Login Error:", error);
       setloading(false);
       seterorrfirebase("Failed to login with Facebook. Please try again.");
     }

@@ -114,7 +114,7 @@ const Header = () => {
                 
               </div>)
               
-              :(<NavLink to='/Signup' className='font-semibold text-[20px]   text-maincolor transition-colors duration-300 hover:text-touch'>
+              :(<NavLink to='/Login' className='font-semibold text-[20px]   text-maincolor transition-colors duration-300 hover:text-touch'>
                 <FaUserPlus />
                 </NavLink>
                  )}
