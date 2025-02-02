@@ -104,7 +104,7 @@ const Header = () => {
 
 
           {userinfo ?(<div className='flex  items-center  '>
-                <p className='my-[1px] text-maincolor text-[20px] transition-colors duration-300 hover:text-touch'>
+                <p className='my-[1px] text-maincolor sm:text-[12px] xs:text-[10px] transition-colors duration-300 hover:text-touch'>
                   {userinfo.username}
                   </p>
 
