@@ -19,10 +19,6 @@ const Home = () => {
 
 
 
-
-  
-
-
   const groundimg = {
     backgroundImage: "url('/Images/home.png')", // رابط الصورة الخلفية
     backgroundSize: 'cover',     // يغطي العنصر بالكامل
@@ -109,7 +105,7 @@ const Home = () => {
          spaceBetween={30}
          centeredSlides={false}
          autoplay={{
-           delay: 2500,
+           delay: 2000,
            disableOnInteraction: false,
          }}
  
@@ -135,7 +131,7 @@ const Home = () => {
 
  
 >
-  {products.slice(1, 12).map((item) => (
+  {products.slice(1, 20).map((item) => (
     <SwiperSlide key={item.id}>
       <div className="flex flex-col items-center p-4 border rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
         <img src={item.mainImage.url} alt={item.name} className="w-[300px] h-[250px] object-cover rounded-lg mb-4" />
