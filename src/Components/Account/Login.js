@@ -44,12 +44,13 @@ const Login = () => {
       setTimeout(() => navigat("/"), 1000);
     } catch (error) {
       console.log("Google Login Error:", error);
-      setloading(false);
 
       if (error.code === "auth/popup-closed-by-user") {
         return; // لا تعرض رسالة خطأ
+        
       }
       seterorrfirebase("Failed to login with Google. Please try again.");
+      
     }
   };
 
@@ -257,17 +258,17 @@ const Login = () => {
           <p className='mt-2 text-[#7a7777]'>Or Continue with </p>
 
 
-          <div to="/" onClick={handleGoogleLogin} className="w-full flex justify-center bg-red-600 text-white py-2 rounded hover:bg-red-500">
+          <Link  onClick={handleGoogleLogin} className="w-full flex justify-center bg-red-600 text-white py-2 rounded hover:bg-red-500">
             <button className='flex items-center gap-2'  >
               <FaGoogle className=' text-[22px]' />Sign in with Google
             </button>
-          </div>
+          </Link>
 
-          <div onClick={handleFacebookLogin} className="w-full flex justify-center  bg-blue-700 text-white py-2 rounded hover:bg-blue-800">
+          <Link onClick={handleFacebookLogin} className="w-full flex justify-center  bg-blue-700 text-white py-2 rounded hover:bg-blue-800">
             <button className='flex items-center gap-2'  >
               <FaFacebook className=' text-[22px]' />Sign in with Facebook
             </button>
-          </div>
+          </Link>
 
 
         </div>
