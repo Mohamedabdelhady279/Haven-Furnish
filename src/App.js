@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, createRoutesFromElements, Outlet, Route, RouterProvider, ScrollRestoration } from 'react-router-dom';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Home from './Components/Home';
@@ -15,8 +15,7 @@ import { productdata } from './api';
 import './App.css'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Bounce } from 'react-toastify';
-
+import { Bounce } from 'react-toastify';  
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -29,6 +28,9 @@ const Layout = () => {
   return (
     <>
       <Header />
+      {/* خاص ب scroll position */}
+      <ScrollRestoration />
+
       <Outlet />
       <Footer />
       <ToastContainer
@@ -69,6 +71,7 @@ const App = () => {
       <Route path='/' element={<Layout />}>
         <Route index element={<Home />} loader={productdata} ></Route>
         <Route path='/shop' element={<Shop />} loader={productdata}></Route>
+
         <Route path='/Signup' element={<Signup />}></Route>
         <Route path='/Login' element={<Login />}></Route>
 
@@ -93,6 +96,7 @@ const App = () => {
   return (
 
     <div>
+
       <RouterProvider router={router} />
 
 

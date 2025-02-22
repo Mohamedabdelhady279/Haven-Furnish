@@ -91,7 +91,7 @@ import ScrollToTop from 'react-scroll-to-top';
         {Products.map((item) => (
         <div key={item.id} className="border p-4 rounded-lg shadow-lg bg-white">
         <img src={item.mainImage} alt="mainImage" className="w-full h-[200px]  object-cover rounded mb-4" />
-        <h1 className="text-lg font-semibold mb-2">{item.name.slice(0,44)}...</h1>
+        <h1 className="text-lg font-semibold mb-3">{item.name}.</h1>
         <div className="flex items-center gap-2 mb-3">
         <button
         onClick={() => dispatch(decrement(item.id))}

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 const Favorite = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); 
   const favoriteItems = useSelector((state) => state.appReducer.favorites); // احصل على قائمة المفضلة من Redux
 
   const handleRemove = (id) => {

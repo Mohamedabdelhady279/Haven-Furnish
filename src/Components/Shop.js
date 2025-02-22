@@ -5,6 +5,7 @@ import { useLoaderData } from 'react-router-dom'
 import { addtocart, favorites } from '../redux/appslice';
 import { ToastContainer, Zoom, toast } from 'react-toastify';
 import ScrollToTop from "react-scroll-to-top";
+import { NavLink } from 'react-router-dom';
 
 const Shop = () => {
   const dispatch=useDispatch()
@@ -151,7 +152,7 @@ const filterproduct=(cat)=>{
              />
              </button>
 
-
+          
           <div className=' items-center m-2'>
           <button  className="  bg-white-50 text-maincolor px-3 py-2 rounded-3xl border border-black	  transition-colors duration-300 hover:bg-touch" 
           onClick={() => {

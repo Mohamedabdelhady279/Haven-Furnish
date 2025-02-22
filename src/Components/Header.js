@@ -137,7 +137,9 @@ const Header = () => {
           <FaShoppingCart className='text-xl' /> 
 
           {cart.length > 0 && 
-          <span className="text-maincolor text-[20px] transition-colors duration-300 group-hover:text-touch">({cart.length})</span>} 
+          <span className="text-maincolor text-[20px] transition-colors duration-300 group-hover:text-touch">
+            ({cart.length})
+            </span>} 
 
 
           </NavLink>
@@ -149,14 +151,14 @@ const Header = () => {
 
 
           {/* هخفي الزرار في الشاشة الكبيرة  */}
-              <div className='md:hidden'>
-            {
-              !isopened ?
-              (<LuMenu className='text-2xl cursor-pointer  text-maincolor transition-colors duration-300 hover:text-touch'onClick={()=>setisopened(true)}/>)
-              :
-                (<HiX  className='text-2xl cursor-pointer  text-maincolor transition-colors duration-300 hover:text-touch'onClick={()=>setisopened(false)}/>)
-            }    
-              </div>
+        <div className='md:hidden'>
+        {
+        !isopened ?
+        (<LuMenu className='text-2xl cursor-pointer  text-maincolor transition-colors duration-300 hover:text-touch'onClick={()=>setisopened(true)}/>)
+        :
+        (<HiX  className='text-2xl cursor-pointer  text-maincolor transition-colors duration-300 hover:text-touch'onClick={()=>setisopened(false)}/>)
+        }    
+        </div>         
 
 
           </div>
