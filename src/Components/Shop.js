@@ -1,23 +1,26 @@
- import React, { useEffect, useState } from 'react'
+ import React, { useEffect, useMemo, useState } from 'react'
 import { MdFavoriteBorder } from 'react-icons/md';
 import { useDispatch } from 'react-redux';
 import { useLoaderData } from 'react-router-dom'
 import { addtocart, favorites } from '../redux/appslice';
 import { ToastContainer, Zoom, toast } from 'react-toastify';
 import ScrollToTop from "react-scroll-to-top";
-import { NavLink } from 'react-router-dom';
+import Sidefilter from './Sidefilter';
 
 const Shop = () => {
   const dispatch=useDispatch()
   const [data, setdata] = useState([]);
-  const [fliter, setfliter] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('');
 
+  const [minPrice, setMinPrice] = useState('');
+  const [maxPrice, setMaxPrice] = useState('');
   const datas = useLoaderData(); // البيانات المحملة من الـ loader
   const products = datas.data;  // قائمة المنتجات داخل الكائن 'data'
+  
   useEffect(() => {
     setdata(products);
-    setfliter(products);
-  }, []);
+   
+    }, [products]);
 
 
 
@@ -68,18 +71,27 @@ const notification = (name, id) => {
   }
 };
 
+// جزء الفلتر 
+const filteredItems = useMemo(() => {
+  const min = minPrice === '' ? 0 : Number(minPrice);
+  const max = maxPrice === '' ? Infinity : Number(maxPrice);
 
-const filterproduct=(cat)=>{
-  const updatelist=data.filter((x)=>x.category===cat);
-  setfliter(updatelist)
-}
-
+  return data
+    // 1. فلترة الفئة
+    .filter(item =>
+      !selectedCategory || item.category === selectedCategory
+    )
+    // 2. فلترة بالسعر
+    .filter(item =>
+      item.price >= min && item.price <= max
+    );
+}, [data, selectedCategory, minPrice, maxPrice]);
 
 
   return (
     <div className=" container mx-auto my-5  py-10">
       <ToastContainer />
-         
+          
       {/* تطلع علي اول */}
       <ScrollToTop
         smooth
@@ -108,25 +120,56 @@ const filterproduct=(cat)=>{
       />
 
       {/* filter */}
-    <div className='mb-5' data-aos="fade-right" data-aos-duration="1000" >
-    <h1 className='text-4xl text-maincolor font-bold text-center'>Our Elegant Furniture Collection</h1>
+      <div className='mb-5' data-aos="fade-right" data-aos-duration="1000">
+  <h1 className='text-4xl text-maincolor font-bold text-center'>
+    Our Elegant Furniture Collection
+  </h1>
+  <div className='text-center mt-5 py-3 flex flex-wrap gap-2 justify-center'>
+    {/* زر “الكل” */}
+    <button
+      className={`px-3 py-2 rounded-full border-2 ${
+        !selectedCategory
+          ? 'bg-maincolor text-white'
+          : 'bg-white text-maincolor border-gray-300'
+      }`}
+      onClick={() => setSelectedCategory('')}
+    >
+      All Collection
+    </button>
+    {/* أزرار الفئات الثابتة */}
+    {[
+      'Living Room Sets',
+      'Shoe Storage',
+      'Tv Stands MediaConsoles',
+      'Chairs',
+      'Desks',
+      'Coffee Tables'
+    ].map(cat => (
+      <button
+        key={cat}
+        className={`px-3 py-2 rounded-full border-2 ${
+          selectedCategory === cat
+            ? 'bg-maincolor text-white'
+            : 'bg-white text-maincolor border-gray-300'
+        }`}
+        onClick={() => setSelectedCategory(cat)}
+      >
+        {cat}
+      </button>
+    ))}
+  </div>
+</div>
 
-      <div  className='text-center mt-5 py-3 flex flex-wrap gap-2 justify-center'>
-      <button  className=' bg-white-100 text-l text-maincolor  px-3 py-2 rounded-full  border-4 border-gray-300 transition-colors duration-300  hover:bg-touch items-center'  onClick={()=>setfliter(data)} >All Collection </button>
-      <button id="living-room-sets" className=' bg-white-100 text-l text-maincolor  px-3 py-2 rounded-full  border-4 border-gray-300 transition-colors duration-300  hover:bg-touch items-center' onClick={()=>filterproduct("Living Room Sets")} >Living Room Sets</button>
-      <button id="shoe-storage"className=' bg-white-100 text-l text-maincolor  px-3 py-2 rounded-full  border-4 border-gray-300 transition-colors duration-300  hover:bg-touch items-center' onClick={()=>filterproduct("Shoe Storage")}  >Shoe Storage</button>
-      <button id="tv-stands"className=' bg-white-100 text-l text-maincolor  px-3 py-2 rounded-full  border-4 border-gray-300 transition-colors duration-300  hover:bg-touch items-center' onClick={()=>filterproduct("Tv Stands MediaConsoles")} >Tv Stands</button>
-      <button id="chairs" className=' bg-white-100 text-l text-maincolor  px-3 py-2 rounded-full  border-4 border-gray-300 transition-colors duration-300  hover:bg-touch items-center' onClick={()=>filterproduct("Chairs")} >Chairs</button>
-      <button id="desks" className=' bg-white-100 text-l text-maincolor  px-3 py-2 rounded-full  border-4 border-gray-300 transition-colors duration-300  hover:bg-touch items-center' onClick={()=>filterproduct("Desks")} >Desks</button>
-      <button id="coffee-tables" className=' bg-white-100 text-l text-maincolor  px-3 py-2 rounded-full  border-4 border-gray-300 transition-colors duration-300  hover:bg-touch items-center' onClick={()=>filterproduct("Coffee Tables")} >Coffee Tables</button>
-    </div>
-    </div>
 
 
+
+
+
+        <Sidefilter data={data}  minPrice={minPrice} maxPrice={maxPrice} onMinChange={setMinPrice} onMaxChange={setMaxPrice}/>
 {/*البيانات  */}
       <div className="grid grid-cols-2 xs:grid-cols-1 md:grid-cols-2 mdl:grid-cols-3 lg:grid-cols-4 gap-4" data-aos="fade-up" data-aos-duration="1000">
         {/* استعراض المنتجات */}
-        {fliter.map((item) => (
+        {filteredItems.map((item) => (
           <div key={item.id} className="relative border-2 border-gray-300 rounded-lg flex flex-col  justify-between min-h-[300px] ">
             {/* صورة المنتج */}
             <img src={item.mainImage.url} alt={item.mainImage.alt} className="w-full h-40 mb-3 object-cover rounded-md" />

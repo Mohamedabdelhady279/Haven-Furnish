@@ -68,6 +68,7 @@ const Login = () => {
         __id: user.uid,
         email: user.email,
         username: user.displayName || "User",
+        
       };
       localStorage.setItem("userinfo", JSON.stringify(userData));
       dispatch(setuser(userData));
@@ -85,6 +86,14 @@ const Login = () => {
     }
   };
 
+  
+  
+  
+  
+  
+  
+  
+  
   const formik = useFormik({
     initialValues: { email: '', password: '' },
 

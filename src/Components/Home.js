@@ -133,7 +133,7 @@ const Home = () => {
 >
   {products.slice(1, 20).map((item) => (
     <SwiperSlide key={item.id}>
-      <div className="flex flex-col items-center p-4 border rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+      <div className="flex  items-center p-4 border rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
         <img src={item.mainImage.url} alt={item.name} className="w-[300px] h-[250px] object-cover rounded-lg mb-4" />
         <h1 className="text-xl font-semibold text-center mb-2">{item.name}</h1>
         <p className="text-lg text-maincolor font-bold">${item.price}</p>

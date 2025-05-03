@@ -131,6 +131,9 @@ createUserWithEmailAndPassword(auth, email, password)
 }
      </div>
 
+
+
+     
     <div className='relative mb-6'>
     <input  className='w-full border border-gray-300 rounded px-2 py-2 focus:outline-none focus:border-blue-500'
           type='email' name='email'

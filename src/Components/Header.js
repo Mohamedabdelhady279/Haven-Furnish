@@ -50,8 +50,6 @@ const Header = () => {
 
           <div className=' flex justify-between items-center mx-auto'>
 
-
-
           {/* left div */}
           <div >
           <Link to="/" className='font-firstname md:text-[25px] xs:text-[18px] sm:text-[20px] font-bold text-[#4A4A4A]  	'>
@@ -157,11 +155,12 @@ const Header = () => {
         (<LuMenu className='text-2xl cursor-pointer  text-maincolor transition-colors duration-300 hover:text-touch'onClick={()=>setisopened(true)}/>)
         :
         (<HiX  className='text-2xl cursor-pointer  text-maincolor transition-colors duration-300 hover:text-touch'onClick={()=>setisopened(false)}/>)
-        }    
+       
+       }    
         </div>         
 
 
-          </div>
+          </div>  
 
 
 
@@ -169,46 +168,46 @@ const Header = () => {
 
 
 
-{/* Menu */}
-  {isopened&&
-   (
-    <div className='md:hidden flex flex-col items-center  bg-neutral-600 py-4  '>
+        {/* Menu */}
+      {isopened&&
+      (
+        <div className='md:hidden flex flex-col items-center  bg-neutral-600 py-4  '>
 
-<div className='flex flex-col gap-3'>
-<Link to="/"className={`font-semibold text-lg transition-colors duration-300 hover:text-[rgb(184,142,47)]	 ${isActive('/')}`}>
-Home
-</Link>  
-
-
-{/* Shop side */}
-<div className='relative group'>
-
-<Link to="/shop"className={`flex items-center gap-1 font-semibold text-lg transition-colors duration-300 hover:text-[rgb(184,142,47)]	 ${isActive('/shop')}`}>
-Shop <IoIosArrowDown className=' text-[11px] '/>
-</Link>
+    <div className='flex flex-col gap-3'>
+    <Link to="/"className={`font-semibold text-lg transition-colors duration-300 hover:text-[rgb(184,142,47)]	 ${isActive('/')}`}>
+    Home
+    </Link>  
 
 
-<div className="hidden group-hover:block absolute bg-white shadow-md p-3 top-[22px] w-48">
-<NavLink to="/shop#living-room-sets" className="block text-sm font-normal text-maincolor mb-2 transition-all duration-300 ease-in-out hover:scale-110 hover:text-[rgb(184,142,47)] ">
-Living Room Sets
-</NavLink>
-<NavLink to='/shop#coffee-tables' className="block text-sm font-normal text-maincolor  mb-2 transition-all duration-300 ease-in-out hover:scale-110 hover:text-[rgb(184,142,47)]">Coffee Tables</NavLink >
-<NavLink to='/shop#desks'         className="block text-sm font-normal text-maincolor mb-2 transition-all duration-300 ease-in-out hover:scale-110 hover:text-[rgb(184,142,47)]">Desks</NavLink >
-<NavLink to='/shop#tv-stands'     className="block text-sm font-normal text-maincolor mb-2 transition-all duration-300 ease-in-out hover:scale-110 hover:text-[rgb(184,142,47)]">TV Stands</NavLink >
-<NavLink to='shop/#shoe-storage' className="block text-sm font-normal text-maincolor mb-2 transition-all duration-300 ease-in-out hover:scale-110 hover:text-[rgb(184,142,47)]">Shoe Storage</NavLink >
-<NavLink to='shop/#chairs'        className="block text-sm font-normal text-maincolor mb-2 transition-all duration-300 ease-in-out hover:scale-110 hover:text-[rgb(184,142,47)] ">Chairs</NavLink >
-</div>
+    {/* Shop side */}
+    <div className='relative group'>
 
-</div>
+    <Link to="/shop"className={`flex items-center gap-1 font-semibold text-lg transition-colors duration-300 hover:text-[rgb(184,142,47)]	 ${isActive('/shop')}`}>
+    Shop <IoIosArrowDown className=' text-[11px] '/>
+    </Link>
 
 
+    <div className="hidden group-hover:block absolute bg-white shadow-md p-3 top-[22px] w-48">
+    <NavLink to="/shop#living-room-sets" className="block text-sm font-normal text-maincolor mb-2 transition-all duration-300 ease-in-out hover:scale-110 hover:text-[rgb(184,142,47)] ">
+    Living Room Sets
+    </NavLink>
+    <NavLink to='/shop#coffee-tables' className="block text-sm font-normal text-maincolor  mb-2 transition-all duration-300 ease-in-out hover:scale-110 hover:text-[rgb(184,142,47)]">Coffee Tables</NavLink >
+    <NavLink to='/shop#desks'         className="block text-sm font-normal text-maincolor mb-2 transition-all duration-300 ease-in-out hover:scale-110 hover:text-[rgb(184,142,47)]">Desks</NavLink >
+    <NavLink to='/shop#tv-stands'     className="block text-sm font-normal text-maincolor mb-2 transition-all duration-300 ease-in-out hover:scale-110 hover:text-[rgb(184,142,47)]">TV Stands</NavLink >
+    <NavLink to='shop/#shoe-storage' className="block text-sm font-normal text-maincolor mb-2 transition-all duration-300 ease-in-out hover:scale-110 hover:text-[rgb(184,142,47)]">Shoe Storage</NavLink >
+    <NavLink to='shop/#chairs'        className="block text-sm font-normal text-maincolor mb-2 transition-all duration-300 ease-in-out hover:scale-110 hover:text-[rgb(184,142,47)] ">Chairs</NavLink >
+    </div>
 
-  <HashLink to="/#About"className={`font-semibold text-lg transition-colors duration-300 hover:text-[rgb(184,142,47)]	${isActive('/About')}`}>
-    About Us  
-  </HashLink>  
-</div>
- </div>
-   )}
+    </div>
+
+
+
+      <HashLink to="/#About"className={`font-semibold text-lg transition-colors duration-300 hover:text-[rgb(184,142,47)]	${isActive('/About')}`}>
+        About Us  
+      </HashLink>  
+    </div>
+    </div>
+      )}
 
 
 </div>  
